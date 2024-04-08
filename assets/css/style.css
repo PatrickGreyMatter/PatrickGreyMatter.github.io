@@ -752,6 +752,17 @@ section {
 # Testimonials
 --------------------------------------------------------------*/
 
+.testimonial-item {
+  max-width: 100%; /* Ajuste la largeur maximale des éléments texte */
+}
+
+.col-lg-5 {
+  margin-left: 5; /* Réduit la marge gauche */
+}
+
+.img-fluid {
+  width: 80%; /* Réduit la taille des images à 80% de leur taille originale */
+}
 
 
 /*--------------------------------------------------------------

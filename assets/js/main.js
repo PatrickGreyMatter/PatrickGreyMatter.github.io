@@ -255,3 +255,15 @@
     })
   });
 })()
+  function downloadAndOpen(url) {
+    // Download the file
+    var link = document.createElement('a');
+    link.href = url;
+    link.download = url.split('/').pop();
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+
+    // Open the file in a new tab
+    window.open(url, '_blank');
+  }

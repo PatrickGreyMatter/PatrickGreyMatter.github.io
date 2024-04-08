@@ -345,12 +345,12 @@
           </div>
           <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="300">
             <div class="icon"><i class="bi bi-binoculars"></i></div>
-            <h4 class="title"><a href="">Site de streaming de films.</a></h4>
+            <h4 class="title"><a href="#testimonials" class="nav-link scrollto">Site de streaming de films.</a></h4>
             <p class="description">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
           </div>
           <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="400">
             <div class="icon"><i class="bi bi-brightness-high"></i></div>
-            <h4 class="title"><a href="">Application presse-papier pour Windows.</a></h4>
+            <h4 class="title"><a href="#testimonials" class="nav-link scrollto">Application presse-papier pour Windows.</a></h4>
             <p class="description">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque</p>
           </div>
           <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="500">
@@ -368,30 +368,115 @@
   <div class="container">
     <div class="section-title">
       <h2>Projets</h2>
-      <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+      <p>Ici pour pourrez retrouver toutes les informations concernant mes projets, mon site web de streaming ainsi que mon application a télécharger sur Windows uniquement.</p><br>
+      <p>Sont disponible à télécharger le cahier des charges, des wireframes et des maquettes pour mettre en lumière le travail d'avant-projet d'une application, web ou de bureau.</p>
     </div>
+
     <div class="row">
       <!-- Block 1 -->
-      <div class="col-lg-6">
+      <div class="col-lg-5 col-md-6 offset-lg-1" style="background-color: #ADD8E6; padding: 20px; border-radius: 10px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
         <div class="testimonial-item mx-auto mb-5 mb-lg-0">
-          <img class="img-fluid rounded-circle mb-3" src="path-to-your-image.jpg" alt="">
-          <h5>Description of Image/Project</h5>
-          <p class="font-weight-light mb-0">"This is a great project that showcases something interesting."</p>
-          <a href="your-url" class="btn btn-primary">Learn More</a>
+          <img class="img-fluid rounded-circle mb-3" src="assets/img/logo-hubris.png" alt="">
+          <h5><strong>Hubris</strong></h5>
+          <p class="font-weight-light mb-0">"Site de streaming de films libres de droits."</p><br>
+
+          <a class="dropdown">
+            <a class="btn btn-primary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+              Téléchargements
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink1">
+              <li><a class="dropdown-item" onclick="downloadAndOpen('assets/documents/hubris/Application legère, site de streaming/Cahier des charges.pdf')">Cahier des charges</a></li>
+              <li><a class="dropdown-item" onclick="downloadAndOpen('assets/documents/hubris/Application legère, site de streaming/Arborescence Hubris.pdf')">Arborescence</a></li>
+              <li><a class="dropdown-item" onclick="downloadAndOpen('assets/documents/hubris/Application legère, site de streaming/Wireframe Hubris.pdf')">Wireframe</a></li>
+              <li><a class="dropdown-item" onclick="downloadAndOpen('assets/documents/hubris/Application legère, site de streaming/Maquette Hubris.pdf')">Maquette</a></li>
+              <li><a class="dropdown-item" onclick="downloadAndOpen('assets/documents/hubris/Application legère, site de streaming/Schema-database-Hubris.pdf')">Schema database</a></li>
+            </ul>
+          </a>
+
+          <a class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#hubrisModal">Plus d'infos</a>
         </div>
       </div>
+
       <!-- Block 2 -->
-      <div class="col-lg-6">
+      <div class="col-lg-5 col-md-6 offset-lg-1" style="background-color: #ADD8E6; padding: 20px; border-radius: 10px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
         <div class="testimonial-item mx-auto mb-5 mb-lg-0">
-          <img class="img-fluid rounded-circle mb-3" src="path-to-your-second-image.jpg" alt="">
-          <h5>Description of Second Image/Project</h5>
-          <p class="font-weight-light mb-0">"An insightful look into another fascinating project."</p>
-          <a href="your-second-url" class="btn btn-primary">Discover More</a>
+          <img class="img-fluid rounded-circle mb-3" src="assets/img/icon-presse-papier.jpg" alt="">
+          <h5><strong>CtrlC/CtrlWin</strong></h5>
+          <p class="font-weight-light mb-0">"Application Presse-papier (mais pas que) pour Windows."</p><br>
+
+          <a class="dropdown">
+            <a class="btn btn-primary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+              Téléchargements
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink2">
+              <li><a class="dropdown-item" onclick="downloadAndOpen('assets/documents/ctrlc_ctrlwin/Wireframe.pdf')">Wireframe</a></li>
+              <li><a class="dropdown-item" onclick="downloadAndOpen('assets/documents/ctrlc_ctrlwin/Maquette.pdf')">Maquette</a></li>
+              <li><a class="dropdown-item" onclick="downloadAndOpen('assets/documents/ctrlc_ctrlwin/CtrlC_CtrlWin_V1.exe')">CtrlC/CtrlWin (V1.exe)</a></li>
+            </ul>
+          </a>
+
+          <a class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ctrlcModal">Plus d'infos</a>
         </div>
+      </div>
+    </div>
+</div>
+
+</section>
+
+<!-- Modals -->
+<div class="modal fade" id="hubrisModal" tabindex="-1" role="dialog" aria-labelledby="hubrisModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title text-center mx-auto" id="exampleModalLabel"><strong>Hubris - Site de streaming</strong></h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p>Hubris est votre destination ultime pour le streaming de films libres de droits. Profitez d'un large éventail de contenus gratuits et sans publicité. Hubris permet aux utilisateurs de visionner des films sans inscription, mais offre également aux membres inscrits l'accès à de nombreuses options supplémentaires. Par exemple, les inscrits peuvent interagir dans la section commentaires sous les pages des films, et à l'instar de Reddit, voter pour mettre en avant des commentaires utiles ou, inversement, voter contre un commentaire pour le reléguer plus bas dans la liste. De plus, des options telles que la notation des films sur 10 et l'ajout à une bibliothèque personnelle font d'Hubris bien plus qu'un simple site de streaming ; c'est une véritable plateforme d'échange et de discussion.
+        </p>
+        <ul>
+          <li>Large bibliothèque de films</li>
+          <li>Streaming de haute qualité</li>
+          <li>Reprend les codes des reseaux sociaux</li>
+          <li>Accès gratuit et ouvert</li>
+          <li>Interface utilisateur intuitive</li>
+          <li>Soutien au cinéma indépendant et au cinéma d'auteur</li>
+          <li>Développé entièrement a l'aide du framework Laravel</li>
+          <li>Sécurisation et respect des données</li>
+        </ul>
+        <p><strong>Essayez-le maintenant !</strong></p>
       </div>
     </div>
   </div>
-</section>
+</div>
+
+<div class="modal fade" id="ctrlcModal" tabindex="-1" role="dialog" aria-labelledby="ctrlcModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title text-center mx-auto" id="exampleModalLabel"><strong>CtrlC/CtrlWin - Presse-papier Executable</strong></h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p>CC/CWin, prononcé çéçé/çéwin, est une application légère et facile à installer qui reprend le principe simple du presse-papier que l'on retrouve nativement sur Windows et sur bon nombre de systèmes d'exploitation.
+          La différence majeure avec les presse-papier disponibles nativement, c'est qu'il est impossible de copier et coller des vidéos, CC/CWIN permet d'intercepter le raccourci ctrl+c sur les vidéos et de s'occuper du téléchargement du média en tache de fond, fournissant a l'utilisateur une manière simple, en quelques clics pour télécharger ses vidéos youtube préférés sur ordinateur.
+        </p>
+        <ul>
+          <li>Gestion avancée du presse-papier</li>
+          <li>Fonctionnement en arrière-plan</li>
+          <li>Interface minimaliste et épurée</li>
+          <li>Compatible avec toutes les versions de Windows</li>
+          <li>Facilite le copier-coller quotidien</li>
+          <li>développé totalement avec C# et les bibliothèque .NET</li>
+        </ul>
+        <p><strong>Essayez-le maintenant !</strong></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- End Modals -->
+
 <!-- End Testimonials Section -->
 
 
