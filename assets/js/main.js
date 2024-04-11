@@ -267,3 +267,12 @@
     // Open the file in a new tab
     window.open(url, '_blank');
   }
+  $(document).ready(function() {
+    $("[data-fancybox]").fancybox({
+        // When Fancybox opens
+        onInit: function(instance) {
+            // Set a high z-index
+            $(".fancybox-container").css("z-index", "9999");
+        }
+    });
+});

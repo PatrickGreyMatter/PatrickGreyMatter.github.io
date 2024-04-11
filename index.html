@@ -26,6 +26,12 @@
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<!-- FancyBox CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+<!-- FancyBox JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
 
 </head>
 
@@ -329,7 +335,7 @@
           <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up">
             <div class="icon"><i class="bi bi-briefcase"></i></div>
             <h4 class="title"><a href="#services" class="nav-link scrollto" data-bs-toggle="modal" data-bs-target="#modal-real-1">Implémentation de flux de données de promoteurs immobiliers.</a></h4>
-            <p class="description">justifier les compétences validés</p>
+            <p class="description">Implémenter et mettre a disposition des données de promoteurs ainsi que leurs biens immobilier disponibles pour les utilisateurs de PlugIMMO.</p>
           </div>
           <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100">
             <div class="icon"><i class="bi bi-card-checklist"></i></div>
@@ -343,17 +349,17 @@
           </div>
           <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="300">
             <div class="icon"><i class="bi bi-binoculars"></i></div>
-            <h4 class="title"><a href="#testimonials" class="nav-link scrollto" data-bs-toggle="modal" data-bs-target="#hubrisModal">Site de streaming de films.</a></h4>
+            <h4 class="title"><a href="#services" class="nav-link scrollto" data-bs-toggle="modal" data-bs-target="#modal-real-4">Simulateur loyer immobilier Pinel.</a></h4>
             <p class="description">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
           </div>
           <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="400">
             <div class="icon"><i class="bi bi-brightness-high"></i></div>
-            <h4 class="title"><a href="#testimonials" class="nav-link scrollto" data-bs-toggle="modal" data-bs-target="#ctrlcModal">Application presse-papier pour Windows.</a></h4>
+            <h4 class="title"><a href="#testimonials" class="nav-link scrollto">Client lourd et client leger.</a></h4>
             <p class="description">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque</p>
           </div>
           <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="500">
             <div class="icon"><i class="bi bi-calendar4-week"></i></div>
-            <h4 class="title"><a href="#services" class="nav-link scrollto" data-bs-toggle="modal" data-bs-target="#modal-real-4">Infrastructure réseau d'entreprise.</a></h4>
+            <h4 class="title"><a href="#services" class="nav-link scrollto" data-bs-toggle="modal" data-bs-target="#modal-real-5">Infrastructure réseau d'entreprise.</a></h4>
             <p class="description">Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi</p>
           </div>
         </div>
@@ -365,122 +371,126 @@
       <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
           <div class="modal-content">
               <div class="modal-header">
-                  <h5 class="modal-title text-center mx-auto" id="modal-real-1Label">Title of Modal 1</h5>
+                  <h5 class="modal-title text-center mx-auto" id="modal-real-1Label">Les flux de données immobiliers.</h5>
                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
               </div>
               <div class="modal-body">
-                  <!-- Text Boxes -->
+                  <!-- Text Box -->
                   <div class="row">
                       <div class="col-12">
-                          <p>Your Text Here</p>
-                      </div>
-                      <div class="col-12">
-                          <p>Your Text Here</p>
+                          <p>La grande part de mon travail consiste à récuperer, comprendre, nettoyer et implémenter les données clés de l'outils a l'aide d'API, de code php, et d'ingeniosité.</p><br>
+                          <p>les fichiers de données comme les flux sont récuperés a l'éxecution sur serveur des differentes classes a l'aide de Crons, ce qui permet dans le même temps de récuperer les flux de données, et de les enregistrer sur un FTP dedié. Certains promoteurs déposent eux-même les fichiers sur le FTP. </p>
                       </div>
                   </div>
-                  <!-- Image and Text Block 1 -->
+                  <!-- Image and Text Boxes Side by Side -->
                   <div class="row mt-3">
-                      <div class="col-12">
-                          <img src="Your Image Source Here" class="img-fluid" alt="Description for Image 1">
-                          <p class="mt-2">Your Text Below Image 1 Here</p>
+                      <!-- Image Box 1 -->
+                      <div class="col-4">
+                          <a data-fancybox="gallery" href="assets/img/realisations/flux_plugimmo/data_xml.png" class="fancybox" rel="ligthbox">
+                              <img src="assets/img/realisations/flux_plugimmo/data_xml.png" class="zoom img-fluid" alt="">
+                          </a>
+                          <p class="mt-2">Données de biens immobiliers et promoteurs réçus en XML/JSON.</p>
                       </div>
+                      <!-- Image Box 2 -->
+                      <div class="col-4">
+                          <a data-fancybox="gallery" href="assets/img/realisations/flux_plugimmo/class_flux_1.png" class="fancybox" rel="ligthbox">
+                              <img src="assets/img/realisations/flux_plugimmo/class_flux_1.png" class="zoom img-fluid" alt="">
+                          </a>
+                          <p class="mt-2">On crée une classe pour le promoteur en question, 1 flux de données pour 1 promoteur.</p>
+                      </div>
+                      <div class="col-4">
+                        <a data-fancybox="gallery" href="assets\img\realisations\flux_plugimmo\class_flux_xpaths_2.png" class="fancybox" rel="ligthbox">
+                            <img src="assets\img\realisations\flux_plugimmo\class_flux_xpaths_2.png" class="zoom img-fluid" alt="">
+                        </a>
+                        <p class="mt-2">Et à l'aide de classes existante dans le code du projet, ou de librairies en libre accès, on récupère les données et on les transcris sur l'outil. Ici Xpath1.0 par exemple.</p>
+                    </div>
                   </div>
-                  <!-- Image and Text Block 2 -->
+                  <div class="col-8">
+                    <p>Et ci dessous le résultat côté utilisateur, de la page d'accueil du site, la page d'un programme, puis les informations sur les lots du programme.</p>
+                </div>
                   <div class="row mt-3">
-                      <div class="col-12">
-                          <img src="Your Image Source Here" class="img-fluid" alt="Description for Image 2">
-                          <p class="mt-2">Your Text Below Image 2 Here</p>
-                      </div>
+                    <!-- Image Box 1 -->
+                    <div class="col-4">
+                        <a data-fancybox="gallery" href="assets\img\realisations\flux_plugimmo\site_zoom_1.png" class="fancybox" rel="ligthbox">
+                            <img src="assets\img\realisations\flux_plugimmo\site_zoom_1.png" class="zoom img-fluid" alt="">
+                        </a>
+                    </div>
+                    <!-- Image Box 2 -->
+                    <div class="col-4">
+                        <a data-fancybox="gallery" href="assets\img\realisations\flux_plugimmo\site_zoom_2.png" class="fancybox" rel="ligthbox">
+                            <img src="assets\img\realisations\flux_plugimmo\site_zoom_2.png" class="zoom img-fluid" alt="">
+                        </a>
+                    </div>
+                    <div class="col-4">
+                      <a data-fancybox="gallery" href="assets\img\realisations\flux_plugimmo\site_zoom_3.png" class="fancybox" rel="ligthbox">
+                          <img src="assets\img\realisations\flux_plugimmo\site_zoom_3.png" class="zoom img-fluid" alt="">
+                      </a>
                   </div>
-                  <!-- Image and Text Block 3 -->
-                  <div class="row mt-3">
-                      <div class="col-12">
-                          <img src="Your Image Source Here" class="img-fluid" alt="Description for Image 3">
-                          <p class="mt-2">Your Text Below Image 3 Here</p>
-                      </div>
-                  </div>
+                </div>
               </div>
           </div>
       </div>
   </div>
   <div class="modal fade" id="modal-real-2" tabindex="-1" role="dialog" aria-labelledby="modal-real-1Label" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title text-center mx-auto" id="modal-real-1Label">Title of Modal 1</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <!-- Text Boxes -->
-                <div class="row">
-                    <div class="col-12">
-                        <p>Your Text Here</p>
-                    </div>
-                    <div class="col-12">
-                        <p>Your Text Here</p>
-                    </div>
-                </div>
-                <!-- Image and Text Block 1 -->
-                <div class="row mt-3">
-                    <div class="col-12">
-                        <img src="Your Image Source Here" class="img-fluid" alt="Description for Image 1">
-                        <p class="mt-2">Your Text Below Image 1 Here</p>
-                    </div>
-                </div>
-                <!-- Image and Text Block 2 -->
-                <div class="row mt-3">
-                    <div class="col-12">
-                        <img src="Your Image Source Here" class="img-fluid" alt="Description for Image 2">
-                        <p class="mt-2">Your Text Below Image 2 Here</p>
-                    </div>
-                </div>
-                <!-- Image and Text Block 3 -->
-                <div class="row mt-3">
-                    <div class="col-12">
-                        <img src="Your Image Source Here" class="img-fluid" alt="Description for Image 3">
-                        <p class="mt-2">Your Text Below Image 3 Here</p>
-                    </div>
-                </div>
-            </div>
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title text-center mx-auto" id="modal-real-1Label">Title of Modal 1</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
+        <div class="modal-body">
+          <!-- Text Box -->
+          <div class="row">
+            <div class="col-12">
+              <p>J'ai réalisé un script en Python utilisant la librairie Selenium et les drivers Chromium. Une instance de Chrome va être lancée par le programme, effectuant les actions le plus rapidement possible afin de sauvegarder un grand nombre de données sur un site ou une application web. Voici trois fonctionnalités et avantages :</p>
+              <ul>
+                <li><strong>Interaction avec les éléments web :</strong> Selenium permet d'interagir automatiquement avec des éléments de page web, tels que les boutons, les formulaires, et les liens, imitant l'interaction humaine.</li>
+                <li><strong>Support multi-navigateurs :</strong> Il offre une compatibilité avec plusieurs navigateurs tels que Chrome, Firefox, Safari, et Edge, ce qui permet de tester les applications web sur différents navigateurs sans changer de code.</li>
+                <li><strong>Tests automatisés et intégration CI/CD :</strong> Selenium est largement utilisé pour l'automatisation des tests de sites web, permettant une intégration facile avec les outils de CI/CD pour des déploiements et des tests continus.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-6">
+            <a data-fancybox="gallery" href="assets/img/realisations/infra_reseaux/0xtgGolg2.jpg" class="fancybox" rel="ligthbox">
+              <img src="assets/img/realisations/infra_reseaux/0xtgGolg2.jpg" class="zoom img-fluid" alt="">
+            </a>
+            <p class="mt-2"></p>
+          </div>
+        </div>
+      </div>
     </div>
-</div>
-<div class="modal fade" id="modal-real-3" tabindex="-1" role="dialog" aria-labelledby="modal-real-1Label" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+  </div>
+  
+  <div class="modal fade" id="modal-real-3" tabindex="-1" role="dialog" aria-labelledby="modal-real-1Label" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
       <div class="modal-content">
           <div class="modal-header">
-              <h5 class="modal-title text-center mx-auto" id="modal-real-1Label">Title of Modal 1</h5>
+              <h5 class="modal-title text-center mx-auto" id="modal-real-1Label">Script de récuperation de contacts pour l'API de Ringover.</h5>
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
-              <!-- Text Boxes -->
+              <!-- Text Box -->
               <div class="row">
                   <div class="col-12">
-                      <p>Your Text Here</p>
-                  </div>
-                  <div class="col-12">
-                      <p>Your Text Here</p>
+                      <p>La tache de récuperation des contacts a été donné par mon employeur, plus de 2000 contacts et de leur informations, numéros, identité, ainsi que les historique de conversations jusqu'au 100 derniers messages.</p>
                   </div>
               </div>
-              <!-- Image and Text Block 1 -->
+              <!-- Image and Text Boxes Side by Side -->
               <div class="row mt-3">
-                  <div class="col-12">
-                      <img src="Your Image Source Here" class="img-fluid" alt="Description for Image 1">
-                      <p class="mt-2">Your Text Below Image 1 Here</p>
+                  <!-- Image Box 1 -->
+                  <div class="col-6">
+                      <a data-fancybox="gallery" href="assets/img/realisations/RingoverUCaaSReview.png" class="fancybox" rel="ligthbox">
+                          <img src="assets/img/realisations/RingoverUCaaSReview.png" class="zoom img-fluid" alt="">
+                      </a>
+                      <p class="mt-2">Les contacts provenait de 5 profiles d'entreprises sur un seul compte parent Ringover.</p>
                   </div>
-              </div>
-              <!-- Image and Text Block 2 -->
-              <div class="row mt-3">
-                  <div class="col-12">
-                      <img src="Your Image Source Here" class="img-fluid" alt="Description for Image 2">
-                      <p class="mt-2">Your Text Below Image 2 Here</p>
-                  </div>
-              </div>
-              <!-- Image and Text Block 3 -->
-              <div class="row mt-3">
-                  <div class="col-12">
-                      <img src="Your Image Source Here" class="img-fluid" alt="Description for Image 3">
-                      <p class="mt-2">Your Text Below Image 3 Here</p>
+                  <!-- Image Box 2 -->
+                  <div class="col-6">
+                      <a data-fancybox="gallery" href="assets/img/realisations/Capture d'écran 2024-04-11 085759.png" class="fancybox" rel="ligthbox">
+                          <img src="assets/img/realisations/Capture d'écran 2024-04-11 085759.png" class="zoom img-fluid" alt="">
+                      </a>
+                      <p class="mt-2">L'objectif étant la migration de ces contacts et informations vers une solution privé de gestion d'appel et de message.</p><br>
+                      <p>Les données ont été stockés dans des fichiers csv sous une architecture précise.</p>
                   </div>
               </div>
           </div>
@@ -489,45 +499,74 @@
 </div>
 <div class="modal fade" id="modal-real-4" tabindex="-1" role="dialog" aria-labelledby="modal-real-1Label" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
-      <div class="modal-content">
-          <div class="modal-header">
-              <h5 class="modal-title text-center mx-auto" id="modal-real-1Label">Title of Modal 1</h5>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body">
-              <!-- Text Boxes -->
-              <div class="row">
-                  <div class="col-12">
-                      <p>Your Text Here</p>
-                  </div>
-                  <div class="col-12">
-                      <p>Your Text Here</p>
-                  </div>
-              </div>
-              <!-- Image and Text Block 1 -->
-              <div class="row mt-3">
-                  <div class="col-12">
-                      <img src="Your Image Source Here" class="img-fluid" alt="Description for Image 1">
-                      <p class="mt-2">Your Text Below Image 1 Here</p>
-                  </div>
-              </div>
-              <!-- Image and Text Block 2 -->
-              <div class="row mt-3">
-                  <div class="col-12">
-                      <img src="Your Image Source Here" class="img-fluid" alt="Description for Image 2">
-                      <p class="mt-2">Your Text Below Image 2 Here</p>
-                  </div>
-              </div>
-              <!-- Image and Text Block 3 -->
-              <div class="row mt-3">
-                  <div class="col-12">
-                      <img src="Your Image Source Here" class="img-fluid" alt="Description for Image 3">
-                      <p class="mt-2">Your Text Below Image 3 Here</p>
-                  </div>
-              </div>
-          </div>
-      </div>
-  </div>
+    <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title text-center mx-auto" id="modal-real-1Label">Simulateur loyer immobilier Pinel.</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <!-- Text Box -->
+            <div class="row">
+                <div class="col-12">
+                    <p>J'ai coder un petit simulateur Pinel a 3 entrés pour calculer le plafond d'un loyer en fonction de la zone francilienne du bien Pinel, de la surface exterieure et de la surface habitable.</p><br>
+                    <p><strong>la fiscalité Pinel est issu d'une loi permettant la reduction d'impots pour les particuliers qui mettent en location leurs biens neufs.</strong></p>
+                </div>
+            </div>
+            <!-- Image and Text Boxes Side by Side -->
+            <div class="row mt-3">
+                <!-- Image Box 1 -->
+                <div class="col-6">
+                    <a data-fancybox="gallery" href="assets/img/realisations/Capture d'écran 2024-04-10 165754.png" class="fancybox" rel="ligthbox">
+                        <img src="assets/img/realisations/Capture d'écran 2024-04-10 165754.png" class="zoom img-fluid" alt="">
+                    </a>
+                    <p class="mt-2">Dans la section Outils & Partenariats on a plusieurs simulateurs.</p>
+                </div>
+                <!-- Image Box 2 -->
+                <div class="col-6">
+                    <a data-fancybox="gallery" href="assets/img/realisations/Capture d'écran 2024-04-10 165820.png" class="fancybox" rel="ligthbox">
+                        <img src="assets/img/realisations/Capture d'écran 2024-04-10 165820.png" class="zoom img-fluid" alt="">
+                    </a>
+                    <p class="mt-2">Le simulateur offre une interface simple et intuitive. le script est en javascript, sur une Vue du framework VueJS.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<div class="modal fade" id="modal-real-5" tabindex="-1" role="dialog" aria-labelledby="modal-real-1Label" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title text-center mx-auto" id="modal-real-1Label">Développement d'une infrastructure réseau isolée d'entreprise.</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <!-- Text Box -->
+            <div class="row">
+                <div class="col-12">
+                    <p></p>
+                </div>
+            </div>
+            <!-- Image and Text Boxes Side by Side -->
+            <div class="row mt-3">
+                <!-- Image Box 1 -->
+                <div class="col-6">
+                    <a data-fancybox="gallery" href="assets/img/realisations/infra_reseaux/Capture d'écran 2024-04-11 083532.png" class="fancybox" rel="ligthbox">
+                        <img src="assets/img/realisations/infra_reseaux/Capture d'écran 2024-04-11 083532.png" class="zoom img-fluid" alt="">
+                    </a>
+                    <p class="mt-2"></p>
+                </div>
+                <!-- Image Box 2 -->
+                <div class="col-6">
+                    <a data-fancybox="gallery" href="assets/img/realisations/infra_reseaux/Capture d'écran 2024-04-11 083604.png" class="fancybox" rel="ligthbox">
+                        <img src="assets/img/realisations/infra_reseaux/Capture d'écran 2024-04-11 083604.png" class="zoom img-fluid" alt="">
+                    </a>
+                    <p class="mt-2"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 </div>
 
 
@@ -574,7 +613,7 @@
               <li><a class="dropdown-item" onclick="downloadAndOpen('assets/documents/hubris/Application legère, site de streaming/Cahier des charges.pdf')">Cahier des charges</a></li>
               <li><a class="dropdown-item" onclick="downloadAndOpen('assets/documents/hubris/Application legère, site de streaming/Arborescence Hubris.pdf')">Arborescence</a></li>
               <li><a class="dropdown-item" onclick="downloadAndOpen('assets/documents/hubris/Application legère, site de streaming/Wireframe Hubris.pdf')">Wireframe</a></li>
-              <li><a class="dropdown-item" onclick="downloadAndOpen('assets/documents/hubris/Application legère, site de streaming/Maquette Hubris.pdf')">Maquette</a></li>
+              <li><a class="dropdown-item" onclick="downloadAndOpen('assets/documents/hubris/Application legère, site de streaming/Maquette Hubris.pdf')">Maquette, <strong>Bientôt</strong></a></li>
               <li><a class="dropdown-item" onclick="downloadAndOpen('assets/documents/hubris/Application legère, site de streaming/Schema-database-Hubris.pdf')">Schema database</a></li>
             </ul>
           </a>
@@ -595,9 +634,9 @@
               Téléchargements
             </a>
             <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink2">
-              <li><a class="dropdown-item" onclick="downloadAndOpen('assets/documents/ctrlc_ctrlwin/Wireframe.pdf')">Wireframe</a></li>
-              <li><a class="dropdown-item" onclick="downloadAndOpen('assets/documents/ctrlc_ctrlwin/Maquette.pdf')">Maquette</a></li>
-              <li><a class="dropdown-item" onclick="downloadAndOpen('assets/documents/ctrlc_ctrlwin/CtrlC_CtrlWin_V1.exe')">CtrlC/CtrlWin (V1.exe)</a></li>
+              <li><a class="dropdown-item" onclick="downloadAndOpen('assets/documents/ctrlc_ctrlwin/Wireframe.pdf')">Wireframe <strong>Bientôt</strong></a></li>
+              <li><a class="dropdown-item" onclick="downloadAndOpen('assets/documents/ctrlc_ctrlwin/Maquette.pdf')">Maquette <strong>Bientôt</strong></a></li>
+              <li><a class="dropdown-item" onclick="downloadAndOpen('assets/documents/ctrlc_ctrlwin/CtrlC_CtrlWin_V1.exe')">CtrlC/CtrlWin (V1.exe) <strong>Bientôt</strong></a></li>
             </ul>
           </a>
 
@@ -618,7 +657,7 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <p>Hubris est votre destination ultime pour le streaming de films libres de droits. Profitez d'un large éventail de contenus gratuits et sans publicité. Hubris permet aux utilisateurs de visionner des films sans inscription, mais offre également aux membres inscrits l'accès à de nombreuses options supplémentaires. Par exemple, les inscrits peuvent interagir dans la section commentaires sous les pages des films, et à l'instar de Reddit, voter pour mettre en avant des commentaires utiles ou, inversement, voter contre un commentaire pour le reléguer plus bas dans la liste. De plus, des options telles que la notation des films sur 10 et l'ajout à une bibliothèque personnelle font d'Hubris bien plus qu'un simple site de streaming ; c'est une véritable plateforme d'échange et de discussion.
+        <p>Hubris est un site pensé pour le streaming de films libres de droits. Profitez d'un large éventail de contenus gratuits et sans publicité. Hubris permet aux utilisateurs de visionner des films sans inscription, mais offre également aux membres inscrits l'accès à de nombreuses options supplémentaires. Par exemple, les inscrits peuvent interagir dans la section commentaires sous les pages des films, et à l'instar de Reddit, voter pour mettre en avant des commentaires utiles ou, inversement, voter contre un commentaire pour le reléguer plus bas dans la liste. De plus, des options telles que la notation des films sur 10 et l'ajout à une bibliothèque personnelle font d'Hubris bien plus qu'un simple site de streaming ; c'est une véritable plateforme d'échange et de discussion.
         </p>
         <ul>
           <li>Large bibliothèque de films</li>
@@ -630,7 +669,22 @@
           <li>Développé entièrement a l'aide du framework Laravel</li>
           <li>Sécurisation et respect des données</li>
         </ul>
-        <p><strong>Essayez-le maintenant !</strong></p>
+        <div class="row mt-3">
+          <!-- Image Box 1 -->
+          <div class="col-6">
+              <a data-fancybox="gallery" href="assets/documents/hubris/Capture d'écran 2024-04-11 094938.png" class="fancybox" rel="ligthbox">
+                  <img src="assets/documents/hubris/Capture d'écran 2024-04-11 094938.png" class="zoom img-fluid" alt="">
+              </a>
+              <p class="mt-2">Un espace commentaire sous les films commme sur les forums Reddit.</p>
+          </div>
+          <!-- Image Box 2 -->
+          <div class="col-6">
+              <a data-fancybox="gallery" href="assets/documents/hubris/Capture d'écran 2024-04-11 094553.png" class="fancybox" rel="ligthbox">
+                  <img src="assets/documents/hubris/Capture d'écran 2024-04-11 094553.png" class="zoom img-fluid" alt="">
+              </a>
+              <p class="mt-2">Inspiration du site TheFlixertv.</p>
+          </div>
+      </div>
       </div>
     </div>
   </div>
@@ -672,7 +726,7 @@
 
         <div class="section-title">
           <h2>Contact</h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+          <p>Contact pro uniquement, solicitations, ou informatif.</p>
         </div>
 
         <div class="row" data-aos="fade-in">
@@ -682,28 +736,20 @@
               <div class="address">
                 <i class="bi bi-geo-alt"></i>
                 <h4>Location:</h4>
-                <p>A108 Adam Street, New York, NY 535022</p>
+                <p>Rue des Broquiers, Nîmes, 30000</p>
               </div>
 
               <div class="email">
                 <i class="bi bi-envelope"></i>
                 <h4>Email:</h4>
-                <p>info@example.com</p>
+                <p>daldeb.daldeb@gmail.com</p>
               </div>
-
-              <div class="phone">
-                <i class="bi bi-phone"></i>
-                <h4>Call:</h4>
-                <p>+1 5589 55488 55s</p>
-              </div>
-
-              <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621" frameborder="0" style="border:0; width: 100%; height: 290px;" allowfullscreen></iframe>
-            </div>
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1210.0275209728773!2d4.3578757042809535!3d43.836203618931705!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12b42d0979c767e3%3A0xe04272b74f0c8708!2s7%20Rue%20des%20Broquiers%2C%2030000%20N%C3%AEmes!5e0!3m2!1sfr!2sfr!4v1712821249740!5m2!1sfr!2sfr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>            </div>
 
           </div>
 
           <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
-            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+            <form action="https://formspree.io/f/xvoevbev" method="post" role="form" class="php-email-form">
               <div class="row">
                 <div class="form-group col-md-6">
                   <label for="name">Your Name</label>
