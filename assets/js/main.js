@@ -276,3 +276,47 @@
         }
     });
 });
+document.addEventListener('DOMContentLoaded', function() {
+  var form = document.getElementById('contactForm');
+  form.addEventListener('submit', function(event) {
+      event.preventDefault();
+
+      // Reset the display states when the form is submitted
+      document.querySelector('.loading').style.display = 'block';
+      document.querySelector('.error-message').style.display = 'none'; // Hide error message on new submit
+      document.querySelector('.sent-message').style.display = 'none'; // Hide sent message on new submit
+
+      var formData = new FormData(this);
+
+      fetch(form.action, {
+          method: form.method,
+          body: formData,
+          headers: {
+              'Accept': 'application/json',
+          },
+      })
+      .then(response => {
+          document.querySelector('.loading').style.display = 'none'; // Hide loading message
+          if(response.ok) {
+              // If Formspree returns a 200 OK response
+              document.querySelector('.sent-message').style.display = 'block';
+          } else {
+              // If the HTTP response is not OK
+              return response.json(); // Parse JSON response
+          }
+      })
+      .then(data => {
+          if(data && data.error) {
+              document.querySelector('.error-message').textContent = data.error;
+              document.querySelector('.error-message').style.display = 'block';
+          }
+      })
+      .catch(error => {
+          console.error('Error:', error);
+          document.querySelector('.error-message').textContent = "There was an error submitting the form.";
+          document.querySelector('.error-message').style.display = 'block'; // Show error message
+      });
+  });
+});
+
+

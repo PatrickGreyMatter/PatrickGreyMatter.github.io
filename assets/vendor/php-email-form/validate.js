@@ -56,30 +56,29 @@
       headers: {'X-Requested-With': 'XMLHttpRequest'}
     })
     .then(response => {
-      if( response.ok ) {
-        return response.text();
+      if (response.ok) {
+        return response.json(); // Assuming the server always responds with JSON.
       } else {
-        throw new Error(`${response.status} ${response.statusText} ${response.url}`); 
+        // If an HTTP error is received, construct a JSON object with the error to pass it along
+        return response.json().catch(() => {
+          throw new Error(`${response.status} ${response.statusText}`);
+        });
       }
     })
     .then(data => {
       thisForm.querySelector('.loading').classList.remove('d-block');
-      if (data.trim() == 'OK') {
+      if (data.ok) {
         thisForm.querySelector('.sent-message').classList.add('d-block');
         thisForm.reset(); 
       } else {
-        throw new Error(data ? data : 'Form submission failed and no error message returned from: ' + action); 
+        // If the response contains an error message, display it
+        throw new Error(data.error || 'Form submission failed and no error message returned from: ' + action);
       }
     })
     .catch((error) => {
-      displayError(thisForm, error);
+      displayError(thisForm, error.toString());
     });
   }
-
-  function displayError(thisForm, error) {
-    thisForm.querySelector('.loading').classList.remove('d-block');
-    thisForm.querySelector('.error-message').innerHTML = error;
-    thisForm.querySelector('.error-message').classList.add('d-block');
-  }
+  
 
 })();
