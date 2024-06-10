@@ -6,6 +6,27 @@
 * License: https://bootstrapmade.com/license/
 */
 
+
+document.addEventListener('DOMContentLoaded', function() {
+  var carousels = document.querySelectorAll('.carousel');
+
+  carousels.forEach(function(carouselElement) {
+    // Ensure the carousel is properly initialized with the correct settings
+    var carousel = new bootstrap.Carousel(carouselElement, {
+      interval: false,
+      ride: false,
+      wrap: true // Allows cycling through the items without any issue
+    });
+    
+    // Stop any autoplay that might be triggering rapidly
+    if (carouselElement && carouselElement.dataset.bsRide) {
+      carouselElement.dataset.bsRide = '';
+    }
+  });
+});
+
+
+
 (function() {
   "use strict";
 
